@@ -40,7 +40,8 @@
                         <img src="<%-single.imagem%>" alt="">
                         <div class="text">
                            <h3 title="<%-single.titulo%>"><%-single.titulo.substr(0,35)%>...</h3>
-                           <a href="" class="linkbutton"><span>ler mais</span></a>
+                           <div class="overview"><%-single.overview%></div>
+                           <a href="/noticia/<%-single.slug%>" class="linkbutton"><span>ler mais</span></a>
                         </div>
                      </div>
                   <%})%>
