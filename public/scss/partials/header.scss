@@ -24,9 +24,12 @@ header{
          height: 50px;
          justify-content: center;
          align-items: center;
+         padding: 3px;
          border-radius: 50%;
          border: 2px solid $default-color-aqua;
          cursor: pointer;
+         background-color: $default-color-black;
+         text-decoration: none;
          i{
             color: $default-color-aqua;
             font-size: 25px;
@@ -38,7 +41,7 @@ header{
             width: 50px;
             height: 50px;
             background-color: $default-color-black;
-            right: 17px;
+            right: 12.5px;
             top: 15px;
             border-radius: 50%;
             display: none;
@@ -85,6 +88,7 @@ header{
          .container_form{
             &.active{
                display: flex;
+               z-index: 1000;
             }
             position: absolute;
             display: none;
@@ -96,6 +100,7 @@ header{
             left: 0;
             top: 0;
             .close{
+               cursor: pointer;
                display: flex;
             }
             form{

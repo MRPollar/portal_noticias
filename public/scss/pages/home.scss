@@ -167,6 +167,7 @@ section.outras-noticias{
                grid-template-columns: 50% 50%;
                gap: 10px;
                justify-content: center;
+               margin-bottom: 30px;
             }
             .mais-lidas{
                .news-plus{
@@ -214,8 +215,6 @@ section.outras-noticias{
             grid-template-columns: 100%;
             .ultimas{
                grid-template-columns: 100%;
-               gap: 10px;
-               margin-bottom: 30px;
             }
             .mais-lidas{
                .news-plus{

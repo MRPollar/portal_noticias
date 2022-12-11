@@ -30,6 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 consign({})
 .include('models')
+.then('middlewares')
 .then('controllers')
 .then('routes')
 .into(app);
