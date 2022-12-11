@@ -9,8 +9,10 @@ const mongoose = require('mongoose');
 const app = express();
 const key = process.env.DB_PASS;
 const user = process.env.DB_USER;
+const name = process.env.DB_NAME;
 
-mongoose.connect(`mongodb+srv://${user}:${key}@cluster0.smzrjmr.mongodb.net/noticias?retryWrites=true&w=majority`,
+mongoose.set('strictQuery', true);
+mongoose.connect(`mongodb+srv://${user}:${key}@cluster0.smzrjmr.mongodb.net/${name}?retryWrites=true&w=majority`,
 {useNewUrlParser: true, useUnifiedTopology: true}).then(() => {
   console.log('banco de dados conectado');
 })

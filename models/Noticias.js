@@ -1,15 +1,17 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const { Schema } = mongoose;
 
 module.exports = () => {
-   const Noticia = new Schema({
+   const noticia = new Schema({
       titulo: String,
       subtitulo: String,
       conteudo: String,
+      categoria: String,
+      views: Number,
       imagem: String,
       autor: String,
       slug: String
    },{collection: "noticias"});
    
-   return mongoose.model("noticias", Noticia);
+   return mongoose.model("noticias", noticia);
 }

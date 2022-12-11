@@ -61,3 +61,40 @@
       }
    }
 }
+
+@mixin category($color: $default-color-white){
+   font-weight: $font-weight-700;
+   text-transform: uppercase;
+   letter-spacing: 3px;
+   position: absolute;
+   right: 30px;
+   bottom: 40px;
+   font-family: $font-type-sec;
+   color: $color;
+   &.min{
+      font-size: 10px;
+   }
+}
+
+@mixin titleSection($color: $default-color-white, $color2:$default-color-aqua-dark){
+   color: $color;
+   font-size: 35px;
+   font-style: italic;
+   font-weight: $font-weight-700;
+   text-transform: uppercase;
+   font-family: $font-type-sec;
+   position: relative;
+   padding-bottom: 10px;
+   margin-bottom: 20px;
+   &:before{
+      content: '';
+      width: 200px;
+      height: 5px;
+      background-color: $color2;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border-radius: 20px 0 90px 20px;
+      transition: .3s;
+   }
+}

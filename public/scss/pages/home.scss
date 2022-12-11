@@ -25,6 +25,9 @@ section.noticia-destaque{
             bottom: 0;
             left: 0;
             color: $default-color-aqua;
+            span.category{
+               @include category();
+            }
             h1{
                font-size: 35px;
                font-weight: $font-weight-400;
@@ -37,6 +40,95 @@ section.noticia-destaque{
             a.linkbutton{
                @include linkButton();
                margin-top: 20px;
+            }
+         }
+      }
+   }
+}
+
+section.outras-noticias{
+   background-color: $default-color-black-opc;
+   .center{
+      h1{
+         @include titleSection();
+      }
+      .news{
+         display: grid;
+         grid-template-columns: 70% 30%;
+         flex-wrap: wrap;
+         gap: 10px;
+         .ultimas{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            gap: 5px;
+            .noticia-single{
+               overflow: hidden;
+               background-color: $default-color-black;
+               border-right: 0;
+               border-bottom: 2px;
+               border-top: 0;
+               border-left: 2px;
+               border-radius: 0 0 0 10px;
+               border-style: solid;
+               border-color: $default-color-aqua;
+               img{
+                  width: 100%;
+                  height: 250px;
+                  object-fit: cover;
+               }
+               .text{
+                  padding: 30px 10px;
+                  position: relative;
+                  color: $default-color-aqua;
+                  span.category{
+                     @include category($default-color-aqua);
+                     top: 10px;
+                     right: 10px;
+                  }
+                  h2{
+                     margin-bottom: 15px;
+                  }
+                  p{
+                     margin-bottom: 15px
+                  }
+                  a{
+                     @include linkButton();
+                  }
+               }
+            }
+         }
+         .mais-lidas{
+            h2{
+               padding: 6px;
+               text-align: center;
+               text-transform: uppercase;
+               border-radius: 3px 3px 0 0;
+               background-color: $default-color-aqua;
+               color: $default-color-black;
+               border-bottom: 2px solid $default-color-black;
+            }
+            .news-plus{
+               padding: 10px;
+               background-color: $defaul-color-gray;
+               .card-news{
+                  display: grid;
+                  grid-template-columns: 30% 70%;
+                  gap: 5px;
+                  margin-bottom: 10px;
+                  img{
+                     width: 100%;
+                     height: 100px;
+                     object-fit: cover;
+                     object-position: center;
+                  }
+                  .text{
+                     color: $default-color-white;
+                     a.linkbutton{
+                        @include linkButton();
+                        margin-top: 10px;
+                     }
+                  }
+               }
             }
          }
       }
