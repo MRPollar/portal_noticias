@@ -1,0 +1,118 @@
+header{
+   padding: 15px 0;
+   background-color: $default-color-black;
+   border-bottom: 2px solid $default-color-aqua;
+   .center{
+      color: $default-color-aqua-dark;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h1{
+         font-weight: $font-weight-200;
+         a{
+            color: inherit;
+            text-decoration: none;
+            span{
+               font-weight: $font-weight-400;
+               color: $default-color-aqua;
+            }
+         }
+      }
+      .search-icon{
+         display: none;
+         width: 50px;
+         height: 50px;
+         justify-content: center;
+         align-items: center;
+         border-radius: 50%;
+         border: 2px solid $default-color-aqua;
+         cursor: pointer;
+         i{
+            color: $default-color-aqua;
+            font-size: 25px;
+         }
+      }
+      .container_form{
+         .close{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: $default-color-black;
+            right: 17px;
+            top: 15px;
+            border-radius: 50%;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid $default-color-aqua;
+            i{
+               font-size: 25px;
+               color: $default-color-aqua;
+            }
+         }
+         form{
+            width: 100%;
+            max-width: 300px;
+            position: relative;
+            input{
+               width: 100%;
+               padding: 7px 15px;
+               font-size: 16px;
+               outline: none;
+               border: 0;
+               background-color: transparent;
+               border-right: 2px solid $default-color-aqua;
+               border-bottom: 2px solid $default-color-aqua;
+               color: $default-color-aqua;
+               &::placeholder{
+                  color: $default-color-aqua-dark;
+               }
+            }
+            button{
+               display: none;
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 1024px) {
+   header{
+      .center{
+         .search-icon{
+            display: flex;
+         }
+         .container_form{
+            &.active{
+               display: flex;
+            }
+            position: absolute;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            background-color: $default-color-black-opc;
+            left: 0;
+            top: 0;
+            .close{
+               display: flex;
+            }
+            form{
+               background-color: $defaul-color-gray;
+               padding: 30px 20px;
+               button{
+                  display: block;
+                  margin: 0 auto;
+                  margin-top: 15px;
+                  padding: 7px 10px;
+                  background-color: $default-color-black;
+                  border: 2px solid $default-color-aqua-dark;
+                  color: $default-color-aqua-dark;
+                  font-size: 16px;
+               }
+            }
+         }
+      }
+   }
+}
